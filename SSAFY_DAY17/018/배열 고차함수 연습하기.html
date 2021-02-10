@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let bucketLists = [
+                { id: 3, text: "여행 가기", done: false },
+                { id: 2, text: "치킨 먹기", done: true },
+                { id: 1, text: "코딩 하기", done: false },
+            ];
+
+            // 내 코드
+            // function toggle(id) {
+            //     for (let i = 0; i < bucketLists.length; ++i) {
+            //         if (bucketLists[i].id === id) {
+            //             bucketLists[i].done = !bucketLists[i].done;
+            //             break;
+            //         }
+            //     }
+            // }
+
+            // 강사님 코드
+            // map도 내부적으로는 while문과 for문으로 이루어져 있어서(하지만 최적화가 된) 비슷하다고 볼 수 있다.
+            function toggle(id) {
+                return bucketLists.map((bucketList) => {
+                    if (bucketList.id === id) {
+                        bucketList.done = !bucketList.done;
+                        return bucketList;
+                    }
+                    return bucketList;
+                });
+            }
+
+            toggle(2);
+
+            console.log(...bucketLists);
+        </script>
+    </body>
+</html>

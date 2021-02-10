@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const bucketLists = [
+                { id: 3, text: "여행가기", done: false },
+                { id: 2, text: "치킨 먹기", done: true },
+                { id: 1, text: "코딩 하기", done: false },
+            ];
+
+            // 내 코드
+            //   function render() {
+            //     let html = "";
+
+            //     for (let i = 0; i < bucketLists.length; ++i) {
+            //       html +=
+            //         '<li id="' +
+            //         bucketLists[i].id +
+            //         '"><label>\n<input type=' +
+            //         '"checkbox">' +
+            //         bucketLists[i].text +
+            //         "\n</label>\n";
+            //     }
+            //     return html;
+            //   }
+
+            // 강사님 코드
+            function render() {
+                let html = "";
+
+                bucketLists.forEach((bucketList) => {
+                    html += `<li id="${bucketList.id}"><label>
+				<input type="checkbox">${bucketList.text}
+				</label>
+				</li>`;
+                });
+
+                return html;
+            }
+
+            console.log(render());
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* 호이스트 검색해보기 */
+		console.log(x); // undefined, 데이터의 한 종류임.
+
+		/*
+		var x = 1; // 2문장 합쳐짐
+		var x; // 선언문
+		x = 1; // 할당문
+		*/
+		x = 1
+		console.log(x);
+		var x;
+	</script>
+</body>
+
+</html>

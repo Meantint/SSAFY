@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		img {
+			width: 30px;
+			height: 30px;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			width: 350px;
+			padding: 20px 10px;
+			border: 1px solid black;
+			color: gray;
+			font-size: 20px;
+		}
+
+		.container div {
+			margin-left: 30px;
+		}
+
+		.name-wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		.name-wrapper span {
+			margin-left: 10px;
+		}
+
+		.name-wrapper img {
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+		}
+
+		.email-wrapper {
+			position: relative;
+		}
+
+		.email-notification {
+			position: absolute;
+			background: green;
+			border-radius: 10px;
+			padding: 5px 5px;
+			font-size: 14px;
+			color: white;
+			top: -5px;
+			right: -15px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="name-wrapper">
+			<img src="../img/chicken.jpg" alt="치킨 이미지">
+			<span>목상원</span>
+		</div>
+		<div class="notification-wrapper">
+			<img src="../img/bell.png" alt="벨 이미지">
+		</div>
+		<div class="email-wrapper">
+			<img src="../img/mail.png" alt="메일 이미지">
+			<div class="email-notification">99+</div>
+		</div>
+		<div class="menu-wrapper">
+			<img src="../img/grid.png" alt="메뉴">
+		</div>
+	</div>
+</body>
+
+</html>

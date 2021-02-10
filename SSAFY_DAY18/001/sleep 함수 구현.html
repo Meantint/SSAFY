@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function sleep(delay) {
+                let start = new Date().getTime();
+                let limit = start + delay;
+                while (true) {
+                    let now = new Date().getTime();
+                    if (now >= limit) {
+                        break;
+                    }
+                }
+            }
+
+            sleep(1000);
+            console.log("Hello mok");
+        </script>
+    </body>
+</html>

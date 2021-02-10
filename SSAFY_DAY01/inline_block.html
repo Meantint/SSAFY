@@ -1,0 +1,46 @@
+<!--
+1. 자동 줄바꿈되지 않고 옆으로 나열됨 (인라인 속성)
+2. 넓이와 높이값 모두 인라인 태그로 감싼 텍스트 자체의 크기로 설정됨 (인라인 속성)
+3. 넓이와 높이값 지정 가능 (블록 속성)
+4. 인라인블록요소 태그는 블록요소와 인라인요소를 모두 감쌀 수 있음 (블록 속성)
+
+5. 블록요소나 인라인 요소를 float배치하면 자동으로 인라인블록 속성으로 변경됨
+6. 블록요소나 인라인 요소를 position:absolute 혹은 position:fixed 적용하면 자동으로 인라인블록 속성으로 변경됨
+
+inline-block
+기본적으로 inline이고 block 속성을 가지고 있다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			border: 1px solid black;
+		}
+
+		div {
+			display: inline-block;
+			/* 너비 지정이 가능하다 inline은 안됨 */
+			width: 200px;
+		}
+
+		span {
+			display: inline-block;
+		}
+	</style>
+</head>
+
+<body>
+	<div>hello world!</div>
+	<div>hello world!</div>
+
+	<span>
+		<div></div>
+	</span>
+</body>
+
+</html>

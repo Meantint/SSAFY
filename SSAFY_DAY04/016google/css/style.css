@@ -1,0 +1,157 @@
+/* #body-background {
+	background: #fff;
+} */
+
+/* 헤더 부분 */
+
+.header-nav {
+	display: flex;
+}
+
+.header-nav-list-wrapper {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+}
+
+.header-nav-list-wrapper li {
+	margin-left: 10px;
+}
+
+.toggle-button {
+	background: #fff;
+	border: 1px solid #eeeeee;
+	padding: 5px 8px;
+	border-radius: 5px;
+	cursor: pointer;
+	background: #000;
+	color: #fff;
+}
+
+/* 메인 */
+/* inline 요소를 가운데 정렬할 때는 text-align:center */
+.main-container {
+	text-align: center;
+	/* absolute의 기준점 : body */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* block & inline의 차이점..?
+.main-container h1 {
+	background: red;
+	width: 500px;
+}
+*/
+
+.image-logo {
+	width: 272px;
+}
+
+/* 검색 부분 */
+
+.search-container {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.search-icon {
+	position: absolute;
+	top: 13px;
+	left: 10px;
+	width: 17px;
+}
+
+#search-input {
+	height: 44px;
+	width: 100%;
+	border-radius: 50px;
+	border: 1px solid #dddddd;
+	padding-left: 40px;
+}
+
+/* 섹션 */
+
+.bookmark-section {
+	margin-top: 40px;
+}
+
+.bookmark-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 600px;
+	min-width: 430px;
+}
+
+.bookmark-item {
+	margin-top: 30px;
+	width: 112px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.bookmark-item:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+#bookmark-plus {
+	margin-top: 30px;
+	width: 112px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.img-icon-wrapper {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f2f3f5;
+	font-size: 24px;
+}
+
+.img-icon-wrapper>img {
+	width: 60%;
+	height: 60%;
+}
+
+.bookmark-text {
+	margin-top: 5px;
+	color: #000;
+}
+
+/* 다크모드 준비 */
+
+.toggle-button-darkmode {
+	background: #fff;
+	color: #000;
+}
+
+.body-background-darkmode {
+	background: #000;
+}
+
+.img-icon-wrapper-darkmode {
+	background: #fff;
+}
+
+.text-darkmode {
+	color: #fff;
+}

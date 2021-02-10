@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		form {
+			border: 3px solid black;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			max-width: 40vh;
+		}
+	</style>
+</head>
+
+<body>
+	<form>
+		<input type="text" class="id" placeholder="아이디">
+		<input type="password" class="password" placeholder="비밀번호">
+		<button type="button" class="signup">회원가입</button>
+
+		<!-- input type button과 button 태그 차이 -->
+		<!-- 기능상은 없다. 하지만 button 태그는 스타일 적용 o -->
+		<!-- input type button은 애매함 -->
+	</form>
+	<script>
+		const id = document.querySelector('.id');
+		const password = document.querySelector('.password');
+		const signup = document.querySelector('.signup');
+
+		signup.addEventListener('click', function (e) {
+			if (id.value && password.value) {
+				alert('회원가입이 완료되었습니다.');
+			} else {
+				if (!id.value) {
+					if (!password.value) {
+						alert('ID와 Password를 입력해주세요.');
+					} else {
+						alert('ID를 입력해주세요.');
+					}
+				} else {
+					alert('Password를 입력해주세요.');
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

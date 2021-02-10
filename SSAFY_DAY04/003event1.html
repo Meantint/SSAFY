@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			border: 3px solid black;
+			margin: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="item1">
+		<span>1</span>
+		<div class="item2">
+			<span>2</span>
+			<div class="item3">
+				<button>3</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		const item1 = document.querySelector(".item1");
+		const item2 = document.querySelector(".item2");
+		const item3 = document.querySelector(".item3");
+
+		function clickItem(event) {
+			/*console.log("Hello");*/
+			/*console.log(event);
+			console.log(event.log);*/
+			console.log(event.target);
+		}
+
+		item1.addEventListener("click", clickItem);
+		item2.addEventListener("click", clickItem);
+		item3.addEventListener("click", clickItem);
+	</script>
+</body>
+
+</html>

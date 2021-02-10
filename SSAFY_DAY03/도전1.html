@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* 1번 */
+		/*
+		let answer = 0;
+		let arr = [1, 2, 3, 1, 2, 3, 1, 2, 3];
+		for (let i = 0; i < arr.length; ++i) {
+			if (arr[i] === 1) {
+				++answer;
+			}
+		}
+		console.log("1의 개수는 " + answer);
+		*/
+
+		/* 2번 */
+		let exist = false;
+		let arr = ['A', 'E', 'W', 'Q', 'A'];
+		for (let i = 0; i < arr.length; ++i) {
+			if (arr[i] === 'A') {
+				exist = true;
+				break;
+			}
+		}
+		if (exist === false) {
+			console.log("X");
+		}
+		else {
+			console.log("O");
+		}
+	</script>
+</body>
+
+</html>

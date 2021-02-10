@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div></div>
+	<div>구분점</div>
+	<!-- 지금 보이시는 이곳 -->
+	<script>
+		const btn = document.createElement('button');
+		btn.setAttribute("class", "BTS");
+		const text = document.createTextNode('hello world');
+
+		btn.append(text);
+		document.querySelector("body").append(btn);
+	</script>
+</body>
+
+</html>

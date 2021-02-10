@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	.top {
+		background: red;
+		position: static;
+		top: 10px;
+	}
+
+	.right {
+		background: orange;
+		position: relative;
+		top: 10px;
+		left: 50%;
+	}
+
+	.bottom {
+		background: yellow;
+		position: absolute;
+		top: 20px;
+		/* 가장 가까운 부모요소 중 static이 아닌 요소를 기준으로 삼는다. */
+	}
+
+	.left {
+		background: green;
+	}
+</style>
+
+<body>
+	<span class="top">top</span>
+	<span class="right">right</span>
+	<span class="bottom">bottom</span>
+	<span class="left">left</span>
+	<div>test</div>
+</body>
+
+</html>

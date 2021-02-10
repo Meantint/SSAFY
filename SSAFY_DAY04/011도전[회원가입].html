@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		form {
+			border: 3px solid black;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 200px;
+			max-width: 80vh;
+		}
+	</style>
+</head>
+
+<body>
+	<form>
+		<input type="text" class="id" placeholder="아이디">
+		<input type="password" class="password" placeholder="비밀번호">
+		<input type="password" class="check_password" placeholder="비밀번호 확인">
+		<input type="checkbox" class="privacy">개인정보 이용 동의</input>
+		<button type="button" class="signup">회원가입</button>
+	</form>
+
+	<script>
+		const id = document.querySelector('.id');
+		const password = document.querySelector('.password');
+		const check_password = document.querySelector('.check_password');
+		const privacy = document.querySelector('.privacy');
+		const signup = document.querySelector('.signup');
+
+		signup.addEventListener('click', function (e) {
+			if (!id.value) {
+				alert('아이디를 입력하세요');
+			} else {
+				if (!password.value) {
+					alert('패스워드를 입력하세요');
+				} else {
+					if (!check_password.value) {
+						alert('패스워드 확인을 입력하세요');
+					} else {
+						if (password.value !== check_password.value) {
+							alert('패스워드가 일치하지 않습니다. 다시 입력해주세요');
+						} else {
+							console.dir(privacy);
+							if (privacy.checked !== true) {
+								alert('개인이용 정보 동의를 체크하셔야 회원가입이 가능합니다');
+							} else {
+								alert('회원가입이 완료되었습니다');
+							}
+						}
+					}
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

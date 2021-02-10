@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<select class='animal'>
+		<option value="cat" selected>고양이</option>
+		<option value="dog">강아지</option>
+		<option value="pig">돼지</option>
+	</select>
+
+	<div>좋아하는 동물을 선택하세요</div>
+	<div class="result"></div>
+	<script>
+		const animalSelect = document.querySelector('.animal');
+		const result = document.querySelector('.result');
+
+		animalSelect.addEventListener('change', selectEvent);
+
+		function selectEvent(e){
+			console.dir(e);
+			result.textContent = animalSelect.value;
+		}
+	</script>
+</body>	
+</html>

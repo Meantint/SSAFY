@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const body = document.querySelector('body');
+
+		for (let i = 0; i < 5; ++i){
+			const button = document.createElement('button');
+			button.innerText = '버튼' + (i + 1);
+			button.setAttribute('class', 'btn' + (i + 1));
+			body.append(button);
+		}
+
+		body.addEventListener('click', function(e){
+			if(e.target.nodeName === "BUTTON"){
+				alert("안녕" + e.target.textContent);
+			}
+		})
+	</script>
+
+</body>
+</html>

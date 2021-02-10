@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background-color: rgb(236, 236, 236);
+			position: relative;
+			margin: 0px auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 1500px;
+			height: 800px;
+		}
+
+		h1 {
+			font-size: 48px;
+			position: relative;
+			text-align: center;
+			width: 230px;
+			height: 44px;
+			color: #04CF5C;
+			margin: 0px auto;
+		}
+
+		.sel {
+			margin-top: 10px;
+			position: absolute;
+			align-self: flex-end;
+			right: 10%;
+		}
+
+		.box {
+			margin-top: 100px;
+		}
+
+		input[type="text"] {
+			border: rgb(10, 10, 10);
+			margin-top: 45px;
+			width: 500px;
+			height: 44px;
+			position: relative;
+		}
+
+		input[type="password"] {
+			border: rgb(10, 10, 10);
+			margin-top: 10px;
+			width: 500px;
+			height: 44px;
+			position: relative;
+		}
+
+		input[type="button"] {
+			border: #04CF5C;
+			background-color: #04CF5C;
+			color: white;
+			margin-top: 45px;
+			width: 500px;
+			height: 44px;
+			position: relative;
+		}
+
+		label {
+			font-size: 13px;
+		}
+
+		.one-line {
+			display: flex;
+		}
+
+		.security {
+			margin-left: auto;
+		}
+
+		.on-color {
+			color: #04CF5C;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<select class="sel">
+			<option>한국어</option>
+			<option>영어</option>
+			<option>일본어</option>
+		</select>
+
+		<h1>NAVER</h1>
+		<input type="text" placeholder=" 아이디">
+		<br />
+		<input type="password" placeholder=" 비밀번호">
+		<br />
+		<input type="button" value="로그인">
+		<br />
+		<div class="one-line">
+			<label><input type="checkbox" value="로그인 상태 유지" checked> 로그인 상태 유지</label>
+			<div class="security">
+				<strong>IP</strong>보안 <span class="on-color"><strong>ON</strong></span>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

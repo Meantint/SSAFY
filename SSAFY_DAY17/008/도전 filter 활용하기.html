@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		const bucketList = [{
+				id: 1,
+				text: "코딩 하기",
+				done: true
+			},
+			{
+				id: 2,
+				text: "운동 하기",
+				done: false
+			},
+			{
+				id: 3,
+				text: "밥먹기",
+				done: true
+			},
+			{
+				id: 4,
+				text: "게임 하기",
+				done: false
+			},
+		]
+		const res = bucketList.filter(li => li.done === false);
+		console.log(...res);
+	</script>
+</body>
+
+</html>

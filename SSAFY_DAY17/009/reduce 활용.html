@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		const arr = ["홍길동", "임꺽정", "홍길동", "피카츄", "피카츄", "홍길동"];
+
+		const result = arr.reduce((acc, cur) => {
+			if (acc[cur]) {
+				acc[cur]++;
+			} else {
+				acc[cur] = 1;
+			}
+			return acc;
+		}, []);
+
+		console.log(result);
+
+		const result1 = arr.reduce((acc, cur) => {
+			acc[cur] = (acc[cur] ? acc[cur] : 0) + 1;
+			return acc;
+		})
+		console.log(result1);
+
+		const data = ["삼겹살", "돈까스", ["마라탕", "삼겹살"]];
+		// ["삼겹살", "돈까스", "마라탕", "삼겹살"]
+		const a = data.reduce((acc, cur) => acc.concat(cur), []);
+
+		// acc = [] cur = "삼겹살"
+		// ["삼겹살"]
+
+		console.log(result1);
+	</script>
+</body>
+
+</html>

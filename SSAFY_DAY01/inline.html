@@ -1,0 +1,33 @@
+<!-- 1. 자동 줄바꿈되지 않고 옆으로 나열됨
+    2. 넓이와 높이값 모두 인라인 태그로 감싼 텍스트 자체의 크기로 설정됨
+    3. 넓이와 높이값 지정 불가
+    4. 인라인요소 태그는 인라인요소만 감쌀 수 있음 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		span,
+		a {
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<span>테스트</span>
+	<a href="#">테스트</a>
+	<img src="../img/egg.jpg" width="320" height="180">
+
+	<span>
+		<div>
+			aa
+		</div>
+	</span>
+</body>
+
+</html>

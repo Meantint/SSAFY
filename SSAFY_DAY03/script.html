@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="helloworld.js" defer></script>
+</head>
+
+<body>
+	<script>
+		/* Head에 Script 들어갔을 때
+		1. 페이지 뜨는 속도가 느려진다.
+		2. 문서를 초기화하거나, 설정하는 가벼운 스크립트들을 넣는다.
+		3. Script를 모두 로딩 후 브라우저 렌더링을 시작한다.
+		*/
+
+		/* Body 맨 밑에 Script 들어갔을 때
+		1. DOM Tree가 완성된 상태에서 Script가 실행된다.
+		2. 브라우저가 화면에 노출 된 상태에서 Script가 실행된다.
+		*/
+
+		/* 우리는 항상 Body 태그 밑에 Script 태그를 넣을 것임 */
+		/*
+		head에 defer 속성을 부여하고 body 태그의 가장 아래에 쓴다.
+	</script>
+</body>
+
+</html>

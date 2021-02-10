@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		class Man {
+			constructor(a, b) {
+				this.str = "생성시작" + String(a) + " " + String(b);
+			}
+
+			abc(t) {
+				for (let i = 0; i < t; ++i) {
+					console.log(this.str);
+				}
+			}
+		}
+
+		let m = new Man(2, 4);
+
+		m.abc(3);
+	</script>
+</body>
+
+</html>

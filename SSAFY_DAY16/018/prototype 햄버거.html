@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.hamburger-container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.hamburger-wrapper {
+			max-width: 300px;
+			min-height: 300px;
+
+			border: 1px solid black;
+			padding: 10px;
+
+			display: inline-flex;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content: center;
+		}
+
+		.hamburger {
+			margin: 5px;
+			perspective: 1000px;
+			width: 50px;
+			height: 50px;
+			background: url("./img.png");
+			background-size: cover;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="hamburger-container"></div>
+
+	<script>
+		function HamburgerCount(name, count) {
+			this.name = name;
+			this.count = count;
+
+			this.init();
+		}
+
+		HamburgerCount.prototype = {
+			constructor: HamburgerCount,
+
+			init: function () {
+				const hamburgerWrapper = document.createElement("div");
+				hamburgerWrapper.classList.add("hamburger-wrapper");
+
+				for (let i = 0; i < this.count; ++i) {
+					const hamburger = document.createElement("div");
+					hamburger.classList.add("hamburger");
+					hamburgerWrapper.appendChild(hamburger);
+				}
+				document.querySelector(".hamburger-container").appendChild(hamburgerWrapper);
+			},
+			eat: function () {
+				console.log(`${this.name}는(은) 햄버거를 ${this.count}개 먹습니다.`);
+			}
+		}
+
+		const person1 = new HamburgerCount("목상원", 25);
+		person1.eat();
+	</script>
+</body>
+
+</html>

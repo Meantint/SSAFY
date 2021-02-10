@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="input1">
+	<div class="result1"></div>
+	<br />
+	<br />
+	<br />
+	<input type="text" class="input2">
+	<div class="result2"></div>
+
+	<script>
+		const inputElement1 = document.querySelector('.input1');
+		const divElement1 = document.querySelector('.result1');
+
+		inputElement1.addEventListener('keydown', function(e){
+			console.log(e);
+			console.log(e.target);
+			console.log(e.target.value);
+			divElement1.textContent = e.code;
+		})
+
+		const inputElement2 = document.querySelector('.input2');
+		const divElement2 = document.querySelector('.result2');
+
+		inputElement2.addEventListener('keyup', function(e){
+			console.log(e);
+			console.log(e.target);
+			console.log(e.target.value);
+			divElement2.textContent = e.code;
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* 호이스팅 -> js의 부작용, 사용을 지양함. 왜 발생하는지는 알아야 한다. */
+		/* 호이스팅은 var에서 나타남 */
+		/* 호이스팅이 동작하지 않는 것 **처럼** 보임 let, const
+		console.log(go);
+		var go = function () {
+			console.log("hello world");
+		}
+		go();
+		// 함수 표현식 : 변수 호이스팅 발생
+
+		console.log(ABC);
+		function ABC() {
+			console.log("##");
+		}
+
+		const bbc = ABC;
+		bbc();
+
+		const run = function () {
+			for (let i = 0; i < 3; ++i) {
+				// console.log(i);
+			}
+		}
+
+		run();
+	</script>
+</body>
+
+</html>

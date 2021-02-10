@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* 변수명을 겹치게 하면 코드가 길어질 경우 힘들어진다(헷갈림). */
+		/*var a = 10;
+		console.log(a);
+		var a = 20;
+		console.log(a);*/
+
+		// var x = 0;
+		// {
+		// 	var x = 1;
+		// 	console.log(x); // block level scope
+		// }
+		// console.log(x); // function level scope
+
+		/*
+		let a = 10; // 1. 중복선언 불가
+		console.log(a); 
+		a = 20;
+		console.log(a);
+		*/
+
+		/*
+		const b = 10; // 1. 중복선언 불가 2. 재할당 불가
+		console.log(b);
+		const b = 20;
+		console.log(b);
+		*/
+
+		/*
+				let x = 0;
+				{
+					let x = 1;
+					console.log(x); // 2. block level scope
+				}
+				console.log(x);
+		*/
+
+		const x = 0;
+		{
+			const x = 1;
+			console.log(x); // block level scope
+		}
+		console.log(x);
+	</script>
+</body>
+
+</html>

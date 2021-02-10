@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            console.log("어서오세요");
+            console.log("주문하세요");
+            console.log("고민하시는 동안 다른 것을 하고 있겠습니다");
+
+            const pro = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("주문할게요");
+                    // resolve();
+                    reject();
+                }, 1000);
+            });
+
+            console.log("서빙 서빙 서빙");
+
+            pro.then(() => {
+                console.log("GOOD");
+            }).catch(() => {
+                console.log("OH NO");
+            });
+        </script>
+    </body>
+</html>

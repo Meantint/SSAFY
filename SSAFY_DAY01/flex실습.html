@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.a-wrapper {
+			display: flex;
+			/*flex-direction: row-reverse;*/
+			flex-direction: row;
+			/*flex-direction: column-reverse;*/
+			/* default: flex-start, 그리고 flex-end 등등 있다 */
+			justify-content: flex-start;
+			/*align-items: flex-start;*/
+			height: 50px;
+			/*background-color: dodgerblue;*/
+			border-bottom: 10px solid gray;
+		}
+
+		.b-wrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		.c-wrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+
+		.box {
+			width: 120px;
+			height: 30px;
+			border: 1px solid black;
+		}
+
+		.box1 {
+			width: 120px;
+			height: 30px;
+			font-size: 36px;
+		}
+
+		.box2 {
+			width: 120px;
+			height: 30px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="a-wrapper">
+			<div class="box">메뉴 1</div>
+			<div class="box">메뉴 2</div>
+			<div class="box">메뉴 3</div>
+		</div>
+		<div class="b-wrapper">
+			<div class="box1">Logo</div>
+		</div>
+		<div class="c-wrapper">
+			<div class="box2">회원가입</div>
+			<div class="box2">로그인</div>
+		</div>
+	</header>
+</body>
+
+</html>
