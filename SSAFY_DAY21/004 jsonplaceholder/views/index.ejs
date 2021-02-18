@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+            crossorigin="anonymous"
+        />
+        <style>
+            .card-text-hidden {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .card-wrapper {
+                max-width: 400px;
+                min-height: 300px;
+                cursor: pointer;
+                box-shadow: rgba(188, 196, 219, 0.77) 5px 5px 13px 0px;
+            }
+            .card-wrapper:hover {
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <div class="h5 text-white text-decoration-none" href="#">
+                    JSONPlaceholder
+                </div>
+            </div>
+        </nav>
+
+        <div class="d-flex flex-wrap justify-content-center mt-5">
+            <% data.forEach(li => { %>
+            <div onclick="moveDetail('<%= li.id %>')" class="card-wrapper card bg-light m-5">
+                <div
+                    class="card-header text-white bg-primary d-flex flex-column justify-content-center align-items-center"
+                    style="min-height: 70px; min-width: 300px"
+                >
+                    <%=li.title %>
+                </div>
+                <div class="card-body">
+                    <p class="card-text-body card-text card-text-hidden">
+                        <%=li.body %>
+                    </p>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+
+        <%=locals.count %> <%=locals.page %>
+        <nav aria-label="...">
+            <ul class="pagination">
+                <!-- Previous 활성화 -->
+                <% if(Number(page) === 1) { %>
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+                <% } else { %>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<%= Number(page) - 1 %>">Previous</a>
+                </li>
+                <% } %>
+                </>
+
+                <% for(let i = 1; i <= Math.floor(count/6) + 1; ++i) {%>
+                <!-- Page와 i가 같은 경우 active 상태 -->
+                <% if (i === Number(page)){ %>
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link"> <%=i %> </span>
+                </li>
+                <!-- 아닌 부분은 클릭할 수 있게 -->
+                <% } else { %>
+                <li class="page-item">
+                    <!-- href 안의 내용이 추가될 (바뀔) 주소 -->
+                    <a class="page-link" href="/?page=<%= i%>"> <%=i %> </a>
+                </li>
+                <% } %> <% } %>
+
+                <% if (Number(page) === Math.floor(count/6) + 1) { %>
+                    <li class="page-item disabled">
+                        <span class="page-link">Next</span>
+                    </li>
+                <% } else { %>
+                    <li class="page-item">
+                        <a class="page-link" href="?page=<%= Number(page) + 1 %>">Next</span>
+                    </li>
+                <% } %>
+            </ul>
+        </nav>
+
+        <script>
+            function moveDetail(id){
+                console.log(id);
+                location.href = `/${id}`;
+            }
+        </script>
+    </body>
+</html>
