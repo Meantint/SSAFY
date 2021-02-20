@@ -118,16 +118,16 @@ async function getWeather(latitude, longitude) {
         );
         return data;
     }
+    // 키 받아오기
+    const myKey = require("./secret_key.json");
     // 위도와 경도가 없는 경우
     const data = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?q=Seoul&appid=ecdfde5937ac4259526ef7bb5175df3c`
+        `https://api.openweathermap.org/data/2.5/forecast?q=Seoul&appid=${myKey.weather_key}`
     );
     return data;
 }
 // 날씨 data 제대로 가져오는지 test
 // getWeather("", "").then((li) => console.log(li));
-
-// ecdfde5937ac4259526ef7bb5175df3c
 
 function matchIcon(weatherData) {
     if (weatherData === "Clear") return "./images/039-sun.png";
